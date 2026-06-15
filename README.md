@@ -92,19 +92,19 @@ Unlike conventional CNN feature extraction, this work employs a quantum circuit 
 
 The circuit performs:
 
-### Angle Encoding
+### 1.Angle Encoding
 
 Classical pixel values are encoded into quantum states using rotation gates.
 
-### Variational Quantum Layers
+### 2.Variational Quantum Layers
 
 Parameterized quantum gates learn meaningful transformations in Hilbert space.
 
-### Entanglement Operations
+### 3.Entanglement Operations
 
 Qubits exchange information through entanglement, allowing complex feature interactions.
 
-### Measurement
+### 4.Measurement
 
 Expectation values are extracted and used as features for downstream classification.
 
@@ -297,9 +297,8 @@ This project demonstrates:
 
 ### Shashank Kadarla
 
-B.Tech Artificial Intelligence
+M.Tech, Quantum Computing @ DIAT - DRDO
 
-Quantum Machine Learning Researcher
 
 GATE DA Qualified
 
