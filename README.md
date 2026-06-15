@@ -40,7 +40,8 @@ The central research question is:
 # System Overview
 
 <p align="center">
-<img src="assets/architecture.png" width="850">
+<img width="606" height="381" alt="image" src="https://github.com/user-attachments/assets/f56ab61a-2da3-49f3-b961-d0b7a47aa7dd" />
+
 </p>
 
 The proposed framework consists of:
@@ -110,11 +111,6 @@ Expectation values are extracted and used as features for downstream classificat
 
 ---
 
-# Quantum Circuit
-
-<p align="center">
-<img src="assets/quantum_circuit.png" width="800">
-</p>
 
 Configuration:
 
