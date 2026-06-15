@@ -189,7 +189,8 @@ Classes:
 ## Learning Curves
 
 <p align="center">
-<img src="assets/training_curves.png" width="800">
+<img width="1446" height="468" alt="image" src="https://github.com/user-attachments/assets/c00e88e0-294c-421e-94ca-ada9613cc11a" />
+
 </p>
 
 The model demonstrates stable convergence with minimal overfitting.
@@ -199,18 +200,13 @@ The model demonstrates stable convergence with minimal overfitting.
 ## Confusion Matrix
 
 <p align="center">
-<img src="assets/confusion_matrix.png" width="700">
+<img width="593" height="585" alt="image" src="https://github.com/user-attachments/assets/577ee7f1-e21c-4116-9cd1-3e87eee75a98" />
+      
 </p>
 
 ---
 
-## Sample Predictions
 
-<p align="center">
-<img src="assets/sample_predictions.png" width="800">
-</p>
-
----
 
 # Key Findings
 
