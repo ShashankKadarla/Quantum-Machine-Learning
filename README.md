@@ -1,34 +1,158 @@
-# Hybrid Quantum Machine Learning for Multi-Class Image Classification
+<div align="center">
 
-## Overview
+# Quantum-Enhanced Image Classification
 
-This project explores the integration of Quantum Machine Learning (QML) and Deep Learning for image classification. A quantum feature extraction pipeline is developed using PennyLane and integrated with a classical neural network built using TensorFlow/Keras.
+### Hybrid Quantum Machine Learning for Computer Vision using PennyLane and TensorFlow
 
-The objective is to investigate whether quantum-inspired feature representations can effectively capture image information while reducing dimensionality and maintaining strong classification performance.
-
----
-
-## Key Features
-
-✔ Quantum Image Preprocessing
-
-✔ Hybrid Quantum-Classical Architecture
-
-✔ Multi-Class Image Classification
-
-✔ PennyLane Quantum Circuits
-
-✔ TensorFlow/Keras Neural Network
-
-✔ Dimensionality Reduction through Quantum Encoding
-
-✔ Performance Evaluation using Accuracy, Precision, Recall and F1-Score
+[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)]()
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)]()
+[![PennyLane](https://img.shields.io/badge/PennyLane-Quantum-green.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-red.svg)]()
 
 ---
 
-## Dataset
+Exploring Quantum Feature Extraction for Multi-Class Image Classification through a Hybrid Quantum-Classical Learning Framework.
 
-The dataset consists of four image classes.
+</div>
+
+---
+
+# Project Motivation
+
+Deep Learning has revolutionized Computer Vision.
+
+However, modern neural networks require:
+
+- Large datasets
+- Significant computational resources
+- Millions of trainable parameters
+
+Quantum Machine Learning (QML) offers a fundamentally different paradigm where information can be represented in exponentially large Hilbert spaces.
+
+This project investigates whether quantum feature extraction can generate meaningful image representations before classical classification.
+
+The central research question is:
+
+> Can quantum-enhanced feature extraction improve image representation while reducing dimensionality and maintaining competitive classification performance?
+
+---
+
+# System Overview
+
+<p align="center">
+<img src="assets/architecture.png" width="850">
+</p>
+
+The proposed framework consists of:
+
+1. Classical Image Processing
+2. Quantum Feature Extraction
+3. Hybrid Quantum Encoding
+4. Classical Neural Classification
+
+---
+
+# Pipeline
+
+Input Image
+
+↓
+
+Resize & Normalize
+
+↓
+
+Quantum Encoding
+
+↓
+
+Parameterized Quantum Circuit
+
+↓
+
+Quantum Measurement
+
+↓
+
+Feature Vector Generation
+
+↓
+
+Classical Neural Network
+
+↓
+
+Classification Output
+
+---
+
+# Quantum Feature Extraction
+
+Unlike conventional CNN feature extraction, this work employs a quantum circuit for generating image representations.
+
+The circuit performs:
+
+### Angle Encoding
+
+Classical pixel values are encoded into quantum states using rotation gates.
+
+### Variational Quantum Layers
+
+Parameterized quantum gates learn meaningful transformations in Hilbert space.
+
+### Entanglement Operations
+
+Qubits exchange information through entanglement, allowing complex feature interactions.
+
+### Measurement
+
+Expectation values are extracted and used as features for downstream classification.
+
+---
+
+# Quantum Circuit
+
+<p align="center">
+<img src="assets/quantum_circuit.png" width="800">
+</p>
+
+Configuration:
+
+| Parameter | Value |
+|------------|---------|
+| Qubits | 4 |
+| Backend | lightning.qubit |
+| Framework | PennyLane |
+| Measurements | Expectation Values |
+
+---
+
+# Hybrid Neural Architecture
+
+```text
+Input Features
+      │
+      ▼
+Dense(128)
+      │
+    ReLU
+      │
+ Dropout(0.5)
+      │
+Dense(64)
+      │
+    ReLU
+      │
+ Dropout(0.3)
+      │
+ Softmax Output
+```
+
+The architecture combines quantum-derived representations with classical deep learning to create a hybrid learning system.
+
+---
+
+# Dataset
 
 | Split | Samples |
 |---------|---------|
@@ -36,81 +160,23 @@ The dataset consists of four image classes.
 | Validation | 900 |
 | Testing | 900 |
 
-Original image size:
-
-128 × 128 pixels
-
----
-
-## Methodology
-
-### 1. Image Preprocessing
-
-Images are resized and normalized before being processed by the quantum feature extractor.
-
-### 2. Quantum Feature Extraction
-
-The quantum module performs:
-
-- Angle Encoding
-- Quantum Rotations
-- Entanglement Operations
-- Quantum Measurements
-
-Implemented using:
-
-```python
-qml.device("lightning.qubit", wires=4)
-```
-
-The quantum circuit transforms image information into a compressed feature representation.
-
-Input Resolution:
+Image Resolution:
 
 128 × 128
 
-Output Resolution:
+Quantum Processed Resolution:
 
 64 × 64
 
-### 3. Hybrid Classification Network
+Classes:
 
-The extracted quantum features are passed to a classical neural network.
-
-Architecture:
-
-Input Layer
-↓
-Flatten
-↓
-Dense(128, ReLU)
-↓
-Dropout(0.5)
-↓
-Dense(64, ReLU)
-↓
-Dropout(0.3)
-↓
-Dense(Output Classes, Softmax)
+4
 
 ---
 
-## Quantum Circuit
+# Experimental Results
 
-The feature extraction stage utilizes:
-
-- 4-Qubit Quantum Circuit
-- Parameterized Rotation Gates
-- Entanglement Layers
-- Expectation Value Measurements
-
-The generated quantum features are subsequently used by the classical classifier.
-
----
-
-## Results
-
-### Model Performance
+## Training Performance
 
 | Metric | Score |
 |----------|----------|
@@ -120,90 +186,116 @@ The generated quantum features are subsequently used by the classical classifier
 
 ---
 
-## Training Curves
+## Learning Curves
 
-![Training Accuracy](results/training_accuracy.png)
+<p align="center">
+<img src="assets/training_curves.png" width="800">
+</p>
 
-![Training Loss](results/training_loss.png)
+The model demonstrates stable convergence with minimal overfitting.
 
 ---
 
 ## Confusion Matrix
 
-![Confusion Matrix](results/confusion_matrix.png)
+<p align="center">
+<img src="assets/confusion_matrix.png" width="700">
+</p>
 
 ---
 
-## Classification Report
+## Sample Predictions
 
-![Classification Report](results/classification_report.png)
-
----
-
-## Technologies Used
-
-- Python
-- TensorFlow
-- Keras
-- PennyLane
-- NumPy
-- Matplotlib
-- Scikit-Learn
+<p align="center">
+<img src="assets/sample_predictions.png" width="800">
+</p>
 
 ---
 
-## Installation
+# Key Findings
 
-Clone the repository:
+### Quantum Compression
+
+Quantum preprocessing reduced image dimensionality by approximately 75%.
+
+### Stable Learning
+
+The hybrid architecture maintained robust performance across all classes.
+
+### Effective Feature Representation
+
+Quantum-extracted features preserved discriminative information necessary for classification.
+
+---
+
+# Technologies
+
+| Category | Tools |
+|------------|---------|
+| Quantum Computing | PennyLane |
+| Deep Learning | TensorFlow |
+| Neural Networks | Keras |
+| Data Processing | NumPy |
+| Visualization | Matplotlib |
+| Evaluation | Scikit-Learn |
+
+---
+
+# Installation
+
+Clone repository
 
 ```bash
-git clone https://github.com/yourusername/Hybrid-Quantum-Image-Classification.git
+git clone https://github.com/yourusername/Quantum-Enhanced-Image-Classification.git
 ```
 
-Move into project directory:
-
-```bash
-cd Hybrid-Quantum-Image-Classification
-```
-
-Install dependencies:
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## Running the Project
-
-Launch the notebook:
+Launch notebook
 
 ```bash
-jupyter notebook notebooks/final_code.ipynb
-```
-
-Or train directly:
-
-```bash
-python src/train.py
+jupyter notebook
 ```
 
 ---
 
-## Future Work
+# Future Research Directions
 
+This project can be extended toward:
+
+- Quantum Convolutional Neural Networks (QCNN)
 - Variational Quantum Classifiers (VQC)
 - Quantum Transfer Learning
 - Quantum Attention Mechanisms
 - Quantum Federated Learning
 - Execution on Real Quantum Hardware
-- Comparison with Classical CNN Baselines
+- Quantum Computer Vision Systems
 
 ---
 
-## Author
+# Research Contributions
 
-Shashank Kadarla
+This project demonstrates:
+
+✓ Hybrid Quantum-Classical Learning
+
+✓ Quantum Feature Engineering
+
+✓ Quantum Dimensionality Reduction
+
+✓ Computer Vision with Quantum Circuits
+
+✓ End-to-End Quantum Machine Learning Workflow
+
+---
+
+# Author
+
+### Shashank Kadarla
 
 B.Tech Artificial Intelligence
 
@@ -211,17 +303,23 @@ Quantum Machine Learning Researcher
 
 GATE DA Qualified
 
+Interested in:
+
+- Quantum Machine Learning
+- Computer Vision
+- Deep Learning
+- Reinforcement Learning
+- Quantum Optimization
+
 ---
 
-## Citation
-
-If you use this work, please cite:
+# Citation
 
 ```bibtex
-@misc{kadarla2026hqml,
-  author = {Shashank Kadarla},
-  title = {Hybrid Quantum Machine Learning for Multi-Class Image Classification},
-  year = {2026},
-  publisher = {GitHub}
+@misc{kadarla2026quantumvision,
+title={Quantum-Enhanced Image Classification},
+author={Shashank Kadarla},
+year={2026},
+publisher={GitHub}
 }
 ```
